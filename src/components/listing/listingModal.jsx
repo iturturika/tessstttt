@@ -57,7 +57,11 @@ const ListingModal = ({ open, handleClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        let accessToken = localStorage.getItem('access_token');
+        let accessToken;
+
+        if (typeof window !== "undefined") {
+            accessToken = localStorage.getItem('access_token');
+          }
 
         if (!accessToken) {
             alert('Пожалуйста, войдите в систему, чтобы создать объявление.');
@@ -94,7 +98,10 @@ const ListingModal = ({ open, handleClose }) => {
                 console.log('Несанкционированный доступ. Пытаюсь обновить токен...');
                 const newAccessToken = await refreshAccessToken();
                 if (newAccessToken) {
-                    localStorage.setItem('access_token', newAccessToken);
+                    if (typeof window !== "undefined") {
+                        localStorage.setItem('access_token', newAccessToken);
+                      }
+                    
                     setAccessToken(newAccessToken);
                     // Retry the request with the new access token
                     try {

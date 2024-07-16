@@ -51,8 +51,8 @@ function AuthModal({ open, handleClose, setUser }) {
     });
 
     useEffect(() => {
-        let storedAccessToken = localStorage.getItem('access_token');
-        let storedRefreshToken = localStorage.getItem('refresh_token');
+        let storedAccessToken;
+        let storedRefreshToken;
 
         if (typeof window !== "undefined") {
             storedAccessToken = localStorage.getItem('access_token');
@@ -78,14 +78,20 @@ function AuthModal({ open, handleClose, setUser }) {
             try {
                 const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/client/v1/user/refresh`, { refresh_token: refreshToken });
                 const { access_token, refresh_token } = response.data;
-                localStorage.setItem('access_token', access_token);
-                localStorage.setItem('refresh_token', refresh_token);
+                
+                if (typeof window !== "undefined") {
+                    localStorage.setItem('access_token', access_token);
+                    localStorage.setItem('refresh_token', refresh_token);
+                }
                 setUser(response.data);
                 return true;
             } catch (error) {
                 console.error("Failed to refresh token:", error);
-                localStorage.removeItem('access_token');
-                localStorage.removeItem('refresh_token');
+                
+                if (typeof window !== "undefined") {
+                    localStorage.removeItem('access_token');
+                    localStorage.removeItem('refresh_token');
+                }
                 return false;
             }
         } else {
@@ -109,12 +115,10 @@ function AuthModal({ open, handleClose, setUser }) {
             console.log('Access Token:', access_token);
             console.log('Refresh Token:', refresh_token);  // Log refresh token
 
-            localStorage.setItem('access_token', access_token);
-            localStorage.setItem('refresh_token', refresh_token);
-
             
-
             if (typeof window !== "undefined") {
+                localStorage.setItem('access_token', access_token);
+                localStorage.setItem('refresh_token', refresh_token);
                 console.log('Access Token in localStorage:', localStorage.getItem('access_token'));  // Verify storage
                 console.log('Refresh Token in localStorage:', localStorage.getItem('refresh_token'));  // Verify storage
               }

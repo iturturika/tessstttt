@@ -3,25 +3,34 @@ import axios from 'axios';
 
 const useUserStore = create((set) => ({
   user: null,
-  accessToken: localStorage.getItem('access_token'),
-  refreshToken: localStorage.getItem('refresh_token'),
+  accessToken: typeof window !== 'undefined' ? localStorage.getItem('access_token') : '',
+  refreshToken: typeof window !== 'undefined' ? localStorage.getItem('refresh_token') : '',
   authorized: false,
   setUser: (user, accessToken, refreshToken) => {
-    localStorage.setItem('access_token', accessToken);
-    localStorage.setItem('refresh_token', refreshToken);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('access_token', accessToken);
+      localStorage.setItem('refresh_token', refreshToken);
+    }
     set({ user, accessToken, refreshToken, authorized: true });
   },
   setAccessToken: (accessToken) => {
-    localStorage.setItem('access_token', accessToken);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('access_token', accessToken);
+    }
     set({ accessToken });
   },
   logout: () => {
-    localStorage.removeItem('access_token');
-    localStorage.removeItem('refresh_token');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
+    }
     set({ user: null, accessToken: null, refreshToken: null, authorized: false });
   },
   refreshAccessToken: async () => {
-    const refreshToken = localStorage.getItem('refresh_token');
+    let refreshToken;
+    if (typeof window !== 'undefined') {
+      refreshToken = localStorage.getItem('refresh_token');
+    }
     if (!refreshToken) return null;
     try {
       const response = await axios.post(
@@ -29,14 +38,19 @@ const useUserStore = create((set) => ({
         { refresh_token: refreshToken },
       );
       const { access_token, refresh_token } = response.data;
-      localStorage.setItem('access_token', access_token);
-      localStorage.setItem('refresh_token', refresh_token);
+
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('access_token', access_token);
+        localStorage.setItem('refresh_token', refresh_token);
+      }
       set({ accessToken: access_token, refreshToken: refresh_token });
       return access_token;
     } catch (error) {
       console.error('Failed to refresh access token:', error);
-      localStorage.removeItem('access_token');
-      localStorage.removeItem('refresh_token');
+      if (typeof window !== 'undefined') {
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+      }
       set({ user: null, accessToken: null, refreshToken: null, authorized: false });
       return null;
     }

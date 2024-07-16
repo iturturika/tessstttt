@@ -19,7 +19,7 @@ export function Menu() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            let accessToken = localStorage.getItem('access_token');
+            let accessToken;
             if (typeof window !== "undefined") {
                 accessToken = localStorage.getItem('access_token');
               }
@@ -60,7 +60,7 @@ export function Menu() {
         };
 
         const initializeUser = async () => {
-            const accessToken = localStorage.getItem('access_token');
+            let accessToken;
             if (typeof window !== "undefined") {
                 accessToken = localStorage.getItem('access_token');
               }
@@ -123,8 +123,11 @@ export function Menu() {
                         </li>
                         <li className={styles.item}>
                             <button className={styles.exit} onClick={() => {
-                                localStorage.removeItem('access_token');
-                                localStorage.removeItem('refresh_token');
+                                
+                                if (typeof window !== "undefined") {
+                                    localStorage.removeItem('access_token');
+                                    localStorage.removeItem('refresh_token');
+                                  }
                                 setUser(null);
                             }}>Выйти</button>
                         </li>
