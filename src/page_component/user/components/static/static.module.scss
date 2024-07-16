@@ -1,0 +1,98 @@
+.static {
+  max-width: 300px;
+  min-width: 300px;
+}
+.inner {
+  padding-top: 30px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 36px;
+  color: var(--dark-color);
+  margin: 0 0 20px;
+}
+.content {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.star {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.starItem {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.starItem svg {
+  fill: #d6d6d6;
+  width: 14px;
+  height: 14px;
+}
+.filled {
+  fill: #f79900 !important;
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 6px 0;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 4px;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #ebebeb;
+}
+.barProgress {
+  height: 4px;
+  border-radius: 6px;
+  background-color: #a3a3a3;
+}
+.num {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.num span {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 17px;
+  min-height: 40px;
+  border-radius: 6px;
+  color: var(--light-color);
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--accent-color-2);
+  width: fit-content;
+
+  &:hover {
+    background-color: #0099f7;
+  }
+
+  &:active {
+    background-color: #008aed;
+  }
+}
+.text {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--grey-color);
+}

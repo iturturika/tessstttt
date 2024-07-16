@@ -1,0 +1,42 @@
+.head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.title {
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px
+}
+.button{
+    margin: 0 20px 0 0;
+    color: #0af;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+
+    &:hover{
+        color: var(--hover-color);
+    }
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.link{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    color: var(--dark-color);
+
+    &:hover{
+        color: var(--hover-color);
+    }
+}
+.count{
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #858585;
+}

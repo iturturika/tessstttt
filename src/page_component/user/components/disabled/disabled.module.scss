@@ -1,0 +1,7 @@
+.disabled{
+    opacity: .5;
+}
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

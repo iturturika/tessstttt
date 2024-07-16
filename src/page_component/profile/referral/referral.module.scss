@@ -1,0 +1,33 @@
+.referral {
+
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--dark-color);
+    margin: 0 0 20px;
+  }
+
+  .text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--dark-color);
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 17px;
+    min-height: 40px;
+    width: fit-content;
+    background-color: var(--accent-color-2);
+    color: var(--light-color);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    margin: 20px 0 50px;
+  }
+}

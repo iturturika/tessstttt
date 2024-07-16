@@ -1,0 +1,41 @@
+.title{
+    margin: 0 0 20px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 46px;
+    color: var(--dark-color);
+}
+
+.balance{
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    margin-bottom: 50px;
+}
+
+.balanceItem{
+    min-height: 54px;
+}
+
+.balanceTitle{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--dark-color);
+
+    & svg{
+      width: 20px;
+      height: 20px;
+      fill: #B8B8B8;
+    }
+}
+
+.balanceNum{
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--dark-color);
+}

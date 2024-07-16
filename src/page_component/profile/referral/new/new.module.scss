@@ -1,0 +1,239 @@
+.new {
+  .inner {
+    padding: 0 30px;
+  }
+
+  .title {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 36px;
+    color: var(--dark-color);
+    margin: 0 0 30px;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 50px;
+  }
+
+  .containerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .containerTitle {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 26px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+  }
+
+  .input {
+    min-height: 40px;
+    width: 100%;
+    background-color: #f2f1f0;
+    border-radius: 6px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark-color);
+    line-height: 22px;
+
+    &:focus {
+      box-shadow: rgb(128, 212, 255) 0px 0px 0px 3px;
+      background-color: var(--light-color);
+    }
+  }
+
+  .advice {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--grey-color);
+    line-height: 18px;
+    margin-top: 5px;
+  }
+
+  .link {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--accent-color-2);
+    line-height: 22px;
+
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  .rebate {
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--dark-color);
+    line-height: 22px;
+    margin-bottom: 5px;
+  }
+
+  .rebateContent {
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    max-width: 205px;
+    min-width: 205px;
+    position: relative;
+  }
+
+  .rebateBtn {
+    position: relative;
+    background-color: #f2f1f0;
+    border-radius: 6px;
+    min-width: 72px;
+    min-height: 40px;
+    text-align: left;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-color);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-image: url('/img/interface/arrow-2.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .value {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    & .promocode__input {
+      max-width: 140px;
+    }
+  }
+
+  .text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--dark-color);
+  }
+
+  div label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+
+    p {
+      margin: 0;
+    }
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+  }
+
+  .containerBtn {
+    padding: 0 17px;
+    min-height: 40px;
+    border-radius: 6px;
+    background-color: #f2efe9;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark-color);
+  }
+
+  &__date {
+  }
+
+  .description {
+    min-width: 350px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.12) 0px 4px 24px 0px;
+    padding: 20px 24px 32px;
+  }
+
+  .descriptionTitle {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--dark-color);
+    line-height: 22px;
+    margin-bottom: 20px;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .descriptionText {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--dark-color);
+    line-height: 22px;
+  }
+
+  .descriptionSpecialText::before {
+    content: '- ';
+  }
+
+  .menu {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    padding-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .specialAdvice {
+    max-width: 555px;
+  }
+
+  .btn {
+    min-height: 40px;
+    padding: 0 17px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+
+    &:nth-child(1) {
+      background-color: var(--accent-color-2);
+      color: var(--light-color);
+    }
+    &:nth-child(2) {
+      background-color: #cfedff;
+      color: var(--accent-color-2);
+    }
+  }
+}
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}

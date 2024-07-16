@@ -1,0 +1,123 @@
+.tab {
+  margin-bottom: 30px;
+  background: var(--light-color);
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  .menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .type {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .typeBtn {
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('/img/type.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #ebeae8;
+    }
+
+    &:nth-child(1) {
+      background-position-x: 0;
+    }
+
+    &:nth-child(2) {
+      background-position-x: -30px;
+    }
+
+    &:nth-child(3) {
+      background-position-x: -60px;
+    }
+  }
+
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--dark-color);
+    padding: 3px 20px 3px 2px;
+    border-radius: 3px;
+    position: relative;
+
+    &:hover {
+      background-color: #ebeae8;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 3px;
+      transform: translateY(-50%) rotate(180deg);
+      width: 16px;
+      height: 16px;
+      background-image: url('/img/interface/arrow.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .switch {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--dark-color);
+  }
+
+  .favorite {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 2px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--dark-color);
+
+    &:hover {
+      background-color: #ebeae8;
+    }
+  }
+
+  & svg {
+    width: 18px;
+    height: 16px;
+    color: var(--dark-color);
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  min-width: 1025px;
+  max-width: 1025px;
+  padding: 12px 0;
+  z-index: 10;
+}

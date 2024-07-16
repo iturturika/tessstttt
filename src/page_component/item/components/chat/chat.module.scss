@@ -1,0 +1,135 @@
+.inner {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+.title{
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 26px;
+  color: var(--dark-color);
+  margin: 30px 0 10px;
+}
+.content{
+  position: relative;
+  min-width: 380px;
+  margin-bottom: 15px;
+}
+.textarea {
+  resize: none;
+  padding: 8px 48px 9px 15px;
+  background-color: #F2F1F0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--dark-color);
+  border: 3px solid transparent;
+  max-height: 85px;
+  width: 100%;
+}
+.textarea:hover{
+  background-color: #EBEAE8;
+}
+.textarea::-webkit-scrollbar{
+  display: none;
+}
+.textarea:focus{
+  border-color: var(--accent-color-2);
+}
+.send {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+}
+.send:hover{
+  opacity: .7;
+}
+.send svg {
+  fill: var(--dark-color);
+  width: 20px;
+  height: 20px;
+}
+.list {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+.chatBtn {
+  padding: 8px 16px;
+  border-radius: 100px;
+  background-color: #292827;
+  color: var(--light-color);
+  font-size: 14px;
+  font-weight: 500;
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+  width: 788px;
+  margin-bottom: 50px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--grey-color);
+  gap: 5px;
+  margin: 0;
+}
+.btn {
+  padding: 0 13px;
+  border-radius: 6px;
+  min-height: 32px;
+  background-color: #F2EFE9;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.btn:hover{
+  background-color: #ede9e1;
+}
+.btn:active{
+  background-color: #e5dfd3;
+}
+.chat details ul {
+  padding-top: 10px;
+}
+.chat details:not(:last-child) {
+  margin-bottom: 30px;
+}
+.chat details summary{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--dark-color);
+  line-height: 26px;
+  list-style: none;
+  cursor: pointer;
+}
+.chatList{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 788px;
+  margin-bottom: 20px;
+}
+.more{
+  padding: 0 17px;
+  min-height: 40px;
+  border-radius: 6px;
+  background-color: rgb(237, 233, 225);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-color);
+}

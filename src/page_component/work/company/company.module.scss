@@ -1,0 +1,33 @@
+.company {
+
+    .inner{
+      padding: 35px 0;
+    }
+  
+    .title{
+      color: var(--dark-color);
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 30px;
+      margin: 0 0 20px;
+    }
+  
+    .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      img{
+        max-width: 54px;
+        max-height: 54px;
+      }
+  
+      span{
+        color: var(--dark-color);
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+  }
+  

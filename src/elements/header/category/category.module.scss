@@ -1,0 +1,18 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 17px !important;
+    border-radius: 6px;
+    background-color: #00AAFF !important;
+    color: #fff;
+    white-space: nowrap;
+
+    &:hover{
+        background-color: #0099f7 !important;
+    }
+
+    &:active{
+        background-color: #008aed !important;
+    }
+}

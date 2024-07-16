@@ -1,0 +1,79 @@
+.inner {
+  padding-top: 70px;
+}
+.title {
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 30px;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+}
+.content {
+  display: grid;
+  grid-template-columns: calc(100% - 140px) 140px;
+  align-items: flex-end;
+  padding-top: 5px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  color: var(--dark-color);
+}
+.text span {
+  color: #8f8f8f;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dots {
+  display: inline-block;
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #137cb5;
+  margin-right: 6px;
+}
+.dots::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: red;
+  border-left: 1px solid var(--light-color);
+}
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--accent-color-2);
+}
+.btn:hover {
+  color: var(--hover-color);
+}
+.btn:hover svg {
+  fill: var(--hover-color);
+}
+.btn svg {
+  transform: rotate(-90deg);
+  fill: var(--accent-color-2);
+  margin-bottom: 8px;
+}

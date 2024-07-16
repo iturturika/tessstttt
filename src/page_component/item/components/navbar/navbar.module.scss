@@ -1,0 +1,234 @@
+.navbar {
+  width: 380px;
+  background-color: var(--light-color);
+}
+.inner {
+  position: relative;
+  padding-top: 20px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.price {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 36px;
+  color: var(--dark-color);
+}
+.content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.content button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+}
+.content button:hover {
+  background-color: #f7f7f5;
+}
+.content button:active {
+  background-color: #f2f1f0;
+}
+.review {
+  margin-bottom: 20px;
+}
+.reviewNum {
+  padding: 0 6px;
+  min-height: 20px;
+  background-color: #00c257;
+  color: var(--light-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  border-radius: 3px;
+}
+.reviewText {
+  color: #00c257;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.nav {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 66px);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.nav button{
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.buy {
+  background-color: #A168F7;
+  color: var(--light-color);
+}
+.buy:hover{
+  background-color: #965EEB;
+}
+.cart {
+  background-color: #F0E7FE;
+  color: #A168F7;
+}
+.cart:hover{
+  background-color: #DAC5FB;
+}
+.description {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  padding: 0 5px;
+  margin-bottom: 10px;
+}
+.descriptionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.descriptionTitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--dark-color);
+}
+.descriptionText {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--grey-color);
+}
+.descriptionText span{
+  font-size: 11px;
+  background-color: #B1FCA7;
+  color: var(--dark-color);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+.link {
+  display: block;
+  padding-left: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--accent-color-2);
+  margin-bottom: 10px;
+}
+.phone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 66px;
+  border-radius: 3px;
+  background-color: #02d15c;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--light-color);
+  margin-bottom: 10px;
+}
+.phone:hover {
+  background-color: #00c257;
+}
+.phone:active {
+  background-color: #00b353;
+}
+.small {
+  font-size: 14px;
+  line-height: 18px;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 66px;
+  border-radius: 3px;
+  background-color: #00aaff;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--light-color);
+  margin-bottom: 20px;
+}
+.message:hover {
+  background-color: #0099f7;
+}
+.message:active {
+  background-color: #008aed;
+}
+.feedback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feedback a {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-color-2);
+  margin-bottom: 5px;
+}
+.feedback a:hover {
+  color: var(--hover-color);
+}
+.feedbackText {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--dark-color);
+  margin-bottom: 3px;
+}
+.star {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.star svg {
+  fill: #f79900;
+}
+.hzchtoeto {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--dark-color);
+  background-color: #ccecff;
+  border-radius: 4px;
+  padding: 0 3px;
+  width: fit-content;
+  margin-bottom: 15px;
+}
+.feedbackBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 32px;
+  border-radius: 6px;
+  background-color: #f2efe9;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+.feedbackBtn:hover {
+  background-color: #ede9e1;
+}
+.feedbackBtn:active {
+  background-color: #e5dfd3;
+}

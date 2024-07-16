@@ -1,0 +1,53 @@
+.menu {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    padding-left: 25px;
+    padding-top: 30px;
+}
+.menuBtnSpecial {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    padding: 8px 7px 8px 9px;
+    background-color: #f2f1f0;
+
+    &:hover {
+        background-color: #e3e2e1;
+    }
+}
+.menuBtn {
+    width: 32px;
+    height: 32px;
+    padding: 8px 7px 8px 9px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-color);
+
+    &:hover {
+        background-color: #e3e2e1;
+    }
+}
+.menuList {
+    display: flex;
+    align-items: stretch;
+    background-color: #f2f1f0;
+    border-radius: 6px;
+    overflow: hidden;
+    height: fit-content;
+}
+.menuItem:not(:last-child) {
+    border-right: 1px solid #e3e2e1;
+}
+
+.active {
+    background-color: #e3e2e1;
+}
+.disabled {
+    opacity: 0.5;
+    cursor: default;
+    background-color: #f2f1f0;
+}
+.disabled:hover {
+    background-color: #f2f1f0;
+}

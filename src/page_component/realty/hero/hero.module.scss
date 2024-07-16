@@ -1,0 +1,96 @@
+.inner {
+  position: relative;
+  border-radius: 24px;
+  padding: 36px 44px 60px;
+  z-index: 2;
+  overflow: hidden;
+}
+.wrapper {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 324px;
+  height: 242px;
+  object-fit: contain;
+  z-index: 1;
+}
+.title {
+  position: relative;
+  z-index: 2;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 36px;
+  color: var(--dark-color);
+  margin: 0 0 15px;
+}
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  margin-bottom: 15px;
+
+  input {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    outline: none;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+    width: auto;
+    max-width: 225px;
+    min-height: 40px;
+    border-radius: 6px;
+    padding: 3px 28px 3px 16px;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    border: 3px solid transparent;
+    background-image: url('/img/interface/arrow-2.svg');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 95%;
+  }
+
+  button {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: var(--light-color);
+    box-shadow: rgba(9, 94, 144, 0.2) 0px 4px 12px 0px,
+      rgba(0, 122, 191, 0.1) 0px 2px 3px 0px;
+    user-select: none;
+  }
+}
+.menu {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 0 17px !important;
+  min-height: 40px;
+  border-radius: 6px !important;
+  box-shadow: rgba(9, 94, 144, 0.2) 0px 4px 12px 0px,
+    rgba(0, 122, 191, 0.1) 0px 2px 3px 0px;
+  background-color: var(--light-color) !important;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-color);
+}

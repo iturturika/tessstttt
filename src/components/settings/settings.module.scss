@@ -1,0 +1,289 @@
+.settings {
+  max-width: 720px;
+
+  .title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 36px;
+    color: var(--dark-color);
+  }
+
+  .mail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .mailBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 21px;
+    font-weight: 500;
+
+    svg{
+        color: #0091D9;
+    }
+  }
+
+  .mailAlert {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-color);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .item {
+    border-top: 1px solid #d6d6d6;
+    padding-top: 20px;
+  }
+
+  .phoneTitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--dark-color);
+    line-height: 24px;
+  }
+
+  .phoneText {
+    position: relative;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--dark-color);
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: -18px;
+      fill: #04e061;
+    }
+
+    a:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  .phoneContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      color: var(--grey-color);
+    }
+  }
+
+  .phoneNum {
+    font-weight: 400 !important;
+    color: var(--dark-color) !important;
+  }
+
+  .phoneBtn {
+    padding: 0 13px;
+    min-height: 32px;
+    border-radius: 6px;
+    background-color: #f2efe9;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-color);
+  }
+
+  .bellTitle {
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 26px;
+    color: var(--dark-color);
+  }
+
+  .text {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--dark-color);
+    margin: 0;
+
+    & a:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  .bellSubtitle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--dark-color);
+    margin-bottom: 5px;
+  }
+
+  .bellContent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    div {
+      margin-left: 10px;
+    }
+  }
+
+  .bellBtn {
+    min-width: 165px;
+    min-height: 44px;
+    border-radius: 12px;
+    background-color: #f2f1f0;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    color: #838383;
+    border: 3px solid transparent;
+
+    &:focus {
+      border-color: var(--accent-color-2);
+    }
+  }
+
+  .socialTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--dark-color);
+  }
+
+  .socialContent {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 100px;
+    align-items: center;
+  }
+
+  .socialItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .socialName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+
+  .sale {
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: fit-content;
+      margin-left: auto;
+    }
+  }
+
+  .saleContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 320px;
+    margin-bottom: 15px;
+  }
+
+  .custom {
+    .text {
+      font-size: 14px !important;
+    }
+  }
+
+  .customTitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--dark-color);
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+
+  .listItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .listContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .listTitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--dark-color);
+  }
+
+  .listText {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--grey-color);
+  }
+
+  .delete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .deleteContent {
+    .text {
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      color: var(--grey-color) !important;
+      max-width: 440px;
+    }
+  }
+
+  .deleteTitle {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+  }
+
+  .deleteBtn {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--accent-color-2);
+
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+}

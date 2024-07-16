@@ -1,0 +1,264 @@
+.card {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  position: relative;
+  background-color: var(--light-color);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &:hover .contact {
+    display: grid;
+  }
+
+  .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .description {
+    position: relative;
+    max-width: 470px;
+  }
+
+  .content {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .picture {
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    img {
+      border-radius: 5px;
+    }
+  }
+
+  .pictureContent {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .title {
+    display: block;
+    position: relative;
+    z-index: 2;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--accent-color-2);
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  .price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+  }
+
+  .priceNum {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: var(--dark-color);
+  }
+
+  .delivery {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:hover .deliveryText {
+      display: block;
+    }
+  }
+
+  .deliveryText {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    bottom: 25px;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+    background: #292929;
+    color: var(--light-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 15px 30px;
+    border-radius: 12px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: 50%;
+      transform: translateX(50%) rotate(180deg);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #292929;
+    }
+  }
+
+  .price svg {
+    position: relative;
+    z-index: 2;
+    width: 16px;
+    height: 12px;
+    fill: #b8b8b8;
+    cursor: pointer;
+
+    &:hover {
+      fill: #ffb020;
+    }
+  }
+
+  .descriptionText {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--grey-color);
+    margin: 5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .text svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--grey-color);
+  }
+
+  .favorite {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .favorite svg {
+    fill: var(--accent-color-2);
+    width: 20px;
+    height: 20px;
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      scale: 1.15;
+      transition: 0.1s ease-in-out;
+    }
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    height: fit-content;
+  }
+
+  .company {
+    img {
+      border-radius: 3px;
+    }
+  }
+
+  .companyTitle {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    color: var(--dark-color);
+  }
+
+  .companyRating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-color);
+    line-height: 22px;
+  }
+
+  .star {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .star svg {
+    width: 12px;
+    height: 12px;
+    fill: #ffb020;
+  }
+
+  .companyText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    background: #ccecff;
+    border-radius: 3px;
+    color: var(--dark-color);
+    text-align: left;
+    padding: 0 8px;
+    width: fit-content;
+    margin-top: 5px;
+  }
+
+  .contact {
+    display: none;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3px;
+    max-width: 200px;
+  }
+
+  .btn {
+    background: var(--light-color);
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-color);
+  }
+}
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}

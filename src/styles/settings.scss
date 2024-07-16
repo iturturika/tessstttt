@@ -1,0 +1,206 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.page { // <html>
+    height: 100%;
+    font-family: var(--font-family);
+    -webkit-text-size-adjust: 100%;
+}
+
+.page__body { // <body>
+    margin: 0;
+    min-width: 320px;
+    min-height: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.pad-main{
+    padding-top: 30px;
+}
+
+.site-container {
+    overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+.main {
+    min-height: calc(100vh - 200px);
+}
+
+.is-hidden {
+    display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.input-reset {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    outline: none;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+        display: none;
+    }
+}
+
+.x-overflow {
+    overflow-x: scroll !important;
+    overflow-y: hidden !important;
+
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width) !important;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+    outline: none;
+}
+
+.centered {
+    text-align: center;
+}
+
+.dis-scroll {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.hidden-top {
+    position: fixed;
+    top: -70px !important;
+    transition: 0.2s linear;
+}
+
+.opacity-1 {
+    opacity: 1;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--accent-color-2);
+
+    &:hover{
+        color: var(--hover-color);
+    }
+}
+
+.page__title{
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--dark-color);
+    line-height: 1.2;
+    margin: 0 0 25px;
+    padding: 0 var(--container-offset);
+
+    span{
+        color: #a1a1a1;
+    }
+}
+.active-card{
+    border: 2px solid #FF6567;
+}
+
+.site-content{
+    display: flex;
+    align-self: flex-start;
+    gap: 40px;
+    max-width: var(--container-width);
+    padding: var(--container-offset);
+    margin: 0 auto;
+
+    .main{
+        max-width: calc(var(--container-width) - 350px);
+        width: 100%;
+    }
+}
+
+.image{
+    object-fit: cover;
+}
+
+.MuiTabs-indicator{
+    background-color: var(--dark-color) !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    color: var(--grey-color) !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    font-family: var(--font-family) !important;
+    text-transform: unset !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected{
+    color: var(--dark-color) !important;
+}
+.css-1gsv261 {
+    border-bottom: 2px solid !important;
+    border-color: #E3E2E1 !important;
+}
+.css-19kzrtu {
+    padding: 24px 0 !important;
+}
+.css-ahj2mt-MuiTypography-root {
+    font-family: var(--font-family) !important;
+}

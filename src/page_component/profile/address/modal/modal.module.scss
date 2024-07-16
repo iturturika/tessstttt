@@ -1,0 +1,116 @@
+.modal{
+    display: grid;
+  grid-template-columns: repeat(2, 450px);
+}
+.description{
+    padding-right: 40px;
+}
+.title{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--dark-color);
+}
+.input{
+    background-color: #F2F1F0 !important;
+    min-height: 40px;
+    width: 100%;
+    border-radius: 12px !important;
+    padding: 0 40px !important;
+    background-image: url("/img/search.svg");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position-x: 10px;
+    background-position-y: 50%;
+
+    &::placeholder{
+      font-size: 15px;
+      font-weight: 500;
+    }
+}
+.type{
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+.typeBtn{
+    padding: 0 15px !important;
+    min-height: 36px;
+    border-radius: 12px !important;
+    background-color: #F2F1F0 !important;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+.active{
+    background-color: var(--dark-color) !important;
+    color: var(--light-color) !important;
+}
+.subtitle{
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    color: var(--dark-color);
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 5px;
+}
+.contenType{
+    background-color: #F2F1F0 !important;
+    max-width: 130px;
+    min-height: 44px;
+    border-radius: 12px !important;
+    padding: 10px 10px 12px 15px !important;
+    border: 3px solid transparent !important;
+
+    &:focus{
+        border-color: var(--accent-color-2) !important;
+      }
+  
+      &::placeholder{
+        font-size: 15px;
+        font-weight: 500;
+      }
+}
+.textarea{
+    resize: none;
+    background-color: #F2F1F0 !important;
+    width: 100%;
+    min-height: 85px;
+    border-radius: 12px !important;
+    padding: 10px 39px 12px 15px !important;
+    border: 3px solid transparent !important;
+
+    &:focus{
+      border-color: var(--accent-color-2) !important;
+    }
+
+    &::placeholder{
+      font-size: 15px;
+      font-weight: 500;
+    }
+}
+.alert{
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--grey-color);
+    line-height: 18px;
+
+    & a{
+      color: var(--grey-color);
+      text-decoration: underline;
+    }
+}
+.btn{
+    padding: 0 17px !important;
+    min-height: 44px;
+    border-radius: 12px !important;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--accent-color-2) !important;
+    color: var(--light-color);
+}
