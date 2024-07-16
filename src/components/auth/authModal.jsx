@@ -51,8 +51,13 @@ function AuthModal({ open, handleClose, setUser }) {
     });
 
     useEffect(() => {
-        const storedAccessToken = localStorage.getItem('access_token');
-        const storedRefreshToken = localStorage.getItem('refresh_token');
+        let storedAccessToken = localStorage.getItem('access_token');
+        let storedRefreshToken = localStorage.getItem('refresh_token');
+
+        if (typeof window !== "undefined") {
+            storedAccessToken = localStorage.getItem('access_token');
+            storedRefreshToken = localStorage.getItem('refresh_token');
+        }
 
         if (storedAccessToken && storedRefreshToken) {
             validateToken(storedAccessToken, storedRefreshToken).then(isValid => {
@@ -107,8 +112,12 @@ function AuthModal({ open, handleClose, setUser }) {
             localStorage.setItem('access_token', access_token);
             localStorage.setItem('refresh_token', refresh_token);
 
-            console.log('Access Token in localStorage:', localStorage.getItem('access_token'));  // Verify storage
-            console.log('Refresh Token in localStorage:', localStorage.getItem('refresh_token'));  // Verify storage
+            
+
+            if (typeof window !== "undefined") {
+                console.log('Access Token in localStorage:', localStorage.getItem('access_token'));  // Verify storage
+                console.log('Refresh Token in localStorage:', localStorage.getItem('refresh_token'));  // Verify storage
+              }
 
             setUser(response.data);
             setIsAuth(true);

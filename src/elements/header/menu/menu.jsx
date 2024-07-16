@@ -19,7 +19,10 @@ export function Menu() {
 
     useEffect(() => {
         const fetchUserData = async () => {
-            const accessToken = localStorage.getItem('access_token');
+            let accessToken = localStorage.getItem('access_token');
+            if (typeof window !== "undefined") {
+                accessToken = localStorage.getItem('access_token');
+              }
             console.log('Fetching user data with token:', accessToken);
 
             if (accessToken) {
@@ -58,6 +61,9 @@ export function Menu() {
 
         const initializeUser = async () => {
             const accessToken = localStorage.getItem('access_token');
+            if (typeof window !== "undefined") {
+                accessToken = localStorage.getItem('access_token');
+              }
             console.log('Initializing user with access token:', accessToken);
 
             if (!accessToken) {
