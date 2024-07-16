@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from 'react';
 import { Modal, Box, Button, TextField, Typography, Checkbox, FormControlLabel, Link } from '@mui/material';
 import { useForm, Controller } from 'react-hook-form';
